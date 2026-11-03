@@ -26,3 +26,5 @@ output.json
 Thumbs.db
 
 *.zip
+
+.idea/
