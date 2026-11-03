@@ -86,8 +86,10 @@ El proyecto cumple al 100% con los criterios de evaluación de **cero hardcoding
 
 ### Clonar y Abrir el Proyecto
 ```bash
-git clone https://github.com/usuario/AuraBeautyApp.git
-cd AuraBeautyApp
+git clone https://github.com/lazubieta/app_store_beauty.git
+# o mediante SSH:
+# git clone git@github.com:lazubieta/app_store_beauty.git
+cd app_store_beauty
 ```
 1. Abrir Android Studio y seleccionar **File -> Open**.
 2. Seleccionar el directorio del proyecto y aguardar la sincronización de Gradle.
