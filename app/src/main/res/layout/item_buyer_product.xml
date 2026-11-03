@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.AuraBeauty.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/spacing_xsmall"
+    app:cardCornerRadius="@dimen/corner_radius_card"
+    app:cardElevation="@dimen/elevation_low"
+    app:strokeColor="@color/surface_card_stroke">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_medium">
+
+        <!-- Favorite Heart Icon -->
+        <ImageButton
+            android:id="@+id/btnItemFavorite"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorito"
+            android:src="@drawable/ic_favorites"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Product Image Preview -->
+        <ImageView
+            android:id="@+id/ivProductThumb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/product_item_image_height"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:contentDescription="Producto"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_giraffe_mascot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnItemFavorite" />
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/tvItemProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Labial Velvet"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivProductThumb" />
+
+        <!-- Product Tone/Brand -->
+        <TextView
+            android:id="@+id/tvItemProductBrand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Tono Rosa Nude"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemProductName" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tvItemProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:text="$39.900"
+            android:textColor="@color/primary_dark"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemProductBrand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

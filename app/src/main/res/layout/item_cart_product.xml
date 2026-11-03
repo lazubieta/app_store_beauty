@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.AuraBeauty.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_small"
+    android:layout_marginBottom="@dimen/spacing_small"
+    app:cardCornerRadius="@dimen/corner_radius_card"
+    app:cardElevation="@dimen/elevation_low"
+    app:strokeColor="@color/surface_card_stroke">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_medium">
+
+        <!-- Product Image Thumbnail -->
+        <ImageView
+            android:id="@+id/ivCartItemThumb"
+            android:layout_width="@dimen/cart_item_image_size"
+            android:layout_height="@dimen/cart_item_image_size"
+            android:background="@drawable/bg_dashed_photo_placeholder"
+            android:contentDescription="Miniatura"
+            android:padding="@dimen/spacing_small"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_giraffe_mascot"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvCartItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Labial Velvet"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemoveCartItem"
+            app:layout_constraintStart_toEndOf="@+id/ivCartItemThumb"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Tone info -->
+        <TextView
+            android:id="@+id/tvCartItemTone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            android:text="Tono: Rosa Nube"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemoveCartItem"
+            app:layout_constraintStart_toEndOf="@+id/ivCartItemThumb"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartItemTitle" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tvCartItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:text="$39.900"
+            android:textColor="@color/primary_dark"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivCartItemThumb"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartItemTone" />
+
+        <!-- Trash Delete Icon -->
+        <ImageButton
+            android:id="@+id/btnRemoveCartItem"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Eliminar producto"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Quantity Stepper Controls ([-] 1 [+]) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/btnCartQtyMinus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:gravity="center"
+                android:text="−"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCartQtyValue"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnCartQtyPlus"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

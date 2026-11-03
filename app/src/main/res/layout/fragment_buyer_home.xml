@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spacing_standard"
+        android:paddingEnd="@dimen/spacing_standard"
+        android:paddingBottom="@dimen/spacing_xxlarge">
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/tvBuyerGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/buyer_greeting"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_display"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBuyerSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            android:text="@string/buyer_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_body" />
+
+        <!-- Search Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSearchBuyer"
+            style="@style/Widget.AuraBeauty.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_standard"
+            app:cardCornerRadius="@dimen/corner_radius_pill"
+            app:strokeColor="@color/surface_card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/spacing_standard"
+                android:paddingEnd="@dimen/spacing_standard">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/search_hint_makeup"
+                    android:src="@drawable/ic_search" />
+
+                <EditText
+                    android:id="@+id/etSearchMakeup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:background="@null"
+                    android:hint="@string/search_hint_makeup"
+                    android:inputType="text"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/text_size_body" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Category Filter Chips -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_standard"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/layoutCategoryChips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/chipCategoryLips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chip_selected"
+                    android:text="@string/category_lips"
+                    android:textColor="@color/on_primary"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chipCategoryEyes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:text="@string/category_eyes"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body" />
+
+                <TextView
+                    android:id="@+id/chipCategorySkin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:text="@string/category_skin"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- Promotional Banner Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginTop="@dimen/spacing_standard"
+            app:cardCornerRadius="@dimen/corner_radius_card"
+            app:cardElevation="@dimen/elevation_low"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_banner_buyer"
+                android:padding="@dimen/spacing_standard">
+
+                <TextView
+                    android:id="@+id/tvBannerHeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:text="@string/banner_headline"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivBannerGraphic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivBannerGraphic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Cosméticos Aura"
+                    android:src="@drawable/ic_giraffe_mascot"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section Title & See All Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/section_featured_products"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSeeAllProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_see_all"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_size_caption"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Featured Products Recycler View -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFeaturedProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

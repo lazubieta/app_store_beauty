@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_xlarge">
+
+        <!-- User Avatar -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/avatar_size_large"
+            android:layout_height="@dimen/avatar_size_large"
+            android:layout_marginTop="@dimen/spacing_medium"
+            app:cardCornerRadius="44dp"
+            app:strokeColor="@color/primary"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:id="@+id/ivBuyerProfileAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Foto de perfil"
+                android:padding="@dimen/spacing_medium"
+                android:src="@drawable/ic_profile" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tvBuyerProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/profile_name_sample"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_headline"
+            android:textStyle="bold" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/tvBuyerProfileEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            android:text="@string/profile_email_sample"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_body" />
+
+        <!-- Buyer Role Tag -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:background="@drawable/bg_badge_active"
+            android:text="@string/role_buyer"
+            android:textColor="@color/status_active_text"
+            android:textSize="@dimen/text_size_caption"
+            android:textStyle="bold" />
+
+        <!-- User Information Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.AuraBeauty.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            app:cardCornerRadius="@dimen/corner_radius_card"
+            app:cardElevation="@dimen/elevation_low"
+            app:strokeColor="@color/surface_card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Información de la cuenta"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_subtitle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:text="Dirección predeterminada: Cra. 15 # 93-21, Bogotá"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:text="Teléfono: +57 310 987 6543"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:text="Seguridad: Autenticación biométrica habilitada"
+                    android:textColor="@color/secondary_mint_dark"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Right of withdrawal button (Ley 1480 de 2011) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuyerRetract"
+            style="@style/Widget.AuraBeauty.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:text="@string/btn_retract_request" />
+
+        <!-- Logout Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuyerLogout"
+            style="@style/Widget.AuraBeauty.Button.Destructive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/btn_logout" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
