@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.AuraBeauty" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+
+        <!-- Secondary brand color (Mint Fresh) -->
+        <item name="colorSecondary">@color/secondary_mint</item>
+        <item name="colorSecondaryVariant">@color/secondary_mint_dark</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+
+        <!-- Status bar and Navigation bar -->
+        <item name="android:statusBarColor">@color/app_background</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor">@color/surface_card</item>
+
+        <!-- Background color of activities -->
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="colorSurface">@color/surface_card</item>
+
+        <!-- Default text appearance -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <style name="Theme.AuraBeauty.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Custom Button Styles -->
+    <style name="Widget.AuraBeauty.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="cornerRadius">@dimen/corner_radius_large</item>
+        <item name="android:minHeight">@dimen/button_height_standard</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textStyle">bold</item>
+        <item name="elevation">@dimen/elevation_low</item>
+    </style>
+
+    <style name="Widget.AuraBeauty.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary</item>
+        <item name="strokeWidth">@dimen/stroke_width_normal</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="cornerRadius">@dimen/corner_radius_large</item>
+        <item name="android:minHeight">@dimen/button_height_standard</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.AuraBeauty.Button.Mint" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/secondary_mint</item>
+        <item name="android:textColor">@color/on_secondary</item>
+        <item name="cornerRadius">@dimen/corner_radius_large</item>
+        <item name="android:minHeight">@dimen/button_height_standard</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.AuraBeauty.Button.Destructive" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/status_blocked_bg</item>
+        <item name="android:textColor">@color/status_blocked_text</item>
+        <item name="cornerRadius">@dimen/corner_radius_large</item>
+        <item name="android:minHeight">@dimen/button_height_standard</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_subtitle</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Custom CardView Style -->
+    <style name="Widget.AuraBeauty.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/corner_radius_card</item>
+        <item name="cardElevation">@dimen/elevation_low</item>
+        <item name="cardBackgroundColor">@color/surface_card</item>
+        <item name="strokeColor">@color/surface_card_stroke</item>
+        <item name="strokeWidth">@dimen/stroke_width_thin</item>
+    </style>
+
+    <!-- Custom TextInputLayout Outline -->
+    <style name="Widget.AuraBeauty.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corner_radius_medium</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corner_radius_medium</item>
+        <item name="boxBackgroundColor">@color/surface_card</item>
+        <item name="hintTextColor">@color/primary</item>
+    </style>
+
+</resources>

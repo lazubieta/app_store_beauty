@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Aura Beauty Brand Primary Palette -->
+    <color name="primary">#F47196</color>
+    <color name="primary_dark">#D84C74</color>
+    <color name="primary_light">#FCE4EC</color>
+    <color name="primary_container">#FDE8EF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="accent_pink">#FA527F</color>
+
+    <!-- Secondary / Mint Fresh Palette (Acceso seguro, Guardar cambios, Éxito) -->
+    <color name="secondary_mint">#4DB6AC</color>
+    <color name="secondary_mint_dark">#00897B</color>
+    <color name="secondary_mint_light">#E0F2F1</color>
+    <color name="on_secondary">#FFFFFF</color>
+
+    <!-- Canvas and Surfaces -->
+    <color name="app_background">#FFF8F9</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_card_stroke">#F3DAE2</color>
+    <color name="surface_variant">#F9EFF2</color>
+
+    <!-- Typography Colors -->
+    <color name="text_primary">#2D2126</color>
+    <color name="text_secondary">#7E6F76</color>
+    <color name="text_hint">#B8A9B0</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <!-- Status Badges & Alerts -->
+    <color name="status_active_text">#00897B</color>
+    <color name="status_active_bg">#E0F2F1</color>
+    <color name="status_blocked_text">#E53935</color>
+    <color name="status_blocked_bg">#FFEBEE</color>
+    <color name="status_pending_text">#FB8C00</color>
+    <color name="status_pending_bg">#FFF3E0</color>
+    <color name="status_shipped_text">#1E88E5</color>
+    <color name="status_shipped_bg">#E3F2FD</color>
+    <color name="status_preparing_text">#43A047</color>
+    <color name="status_preparing_bg">#E8F5E9</color>
+
+    <!-- Functional Utility Colors -->
+    <color name="divider_color">#F0E5EA</color>
+    <color name="rating_star">#FFB300</color>
+    <color name="button_disabled">#E0D4DA</color>
+    <color name="overlay_dim">#80000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Tone Palette (Makeup Lipsticks & Blush) -->
+    <color name="tone_nude_rose">#C97A7E</color>
+    <color name="tone_peach_glow">#E88B74</color>
+    <color name="tone_terracotta">#BD5B48</color>
+    <color name="tone_crimson_velvet">#8C263E</color>
+    <color name="tone_deep_berry">#5B1D2E</color>
+</resources>

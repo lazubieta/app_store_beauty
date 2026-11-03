@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Branding & Identity -->
+    <string name="app_name">Aura Beauty</string>
+    <string name="app_slogan">Belleza que te acompaña</string>
+    <string name="app_version">v1.0.0 Nativa</string>
+
+    <!-- Transversal: Authentication & Role Selection -->
+    <string name="title_welcome">Aura Beauty</string>
+    <string name="title_portal_seller">Portal de vendedor</string>
+    <string name="title_portal_admin">Panel administrativo</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="btn_create_account">Crear cuenta</string>
+    <string name="btn_biometric_login">Acceso seguro con huella</string>
+    <string name="label_email">Correo electrónico</string>
+    <string name="hint_email">ejemplo@aurabeauty.com</string>
+    <string name="label_password">Contraseña</string>
+    <string name="hint_password">••••••••</string>
+    <string name="btn_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="label_select_role">Selecciona tu perfil de acceso</string>
+    <string name="role_buyer">Comprador</string>
+    <string name="role_seller">Vendedor</string>
+    <string name="role_admin">Administrador</string>
+
+    <!-- Transversal: Register & Recovery -->
+    <string name="title_register">Registro de usuario</string>
+    <string name="label_full_name">Nombre completo</string>
+    <string name="hint_full_name">Ingresa tu nombre y apellido</string>
+    <string name="label_phone">Número de teléfono</string>
+    <string name="hint_phone">300 123 4567</string>
+    <string name="label_confirm_password">Confirmar contraseña</string>
+    <string name="terms_consent_checkbox">Acepto los términos, condiciones y la política de tratamiento de datos personales conforme a la Ley 1581 de 2012.</string>
+    <string name="title_recover_password">Recuperar contraseña</string>
+    <string name="desc_recover_password">Ingresa tu correo registrado y te enviaremos un enlace seguro para restablecer tu acceso.</string>
+    <string name="btn_send_recovery">Enviar enlace de recuperación</string>
+    <string name="msg_recovery_sent">Se ha enviado el enlace de restablecimiento a tu correo.</string>
+
+    <!-- Transversal: Biometrics -->
+    <string name="biometric_title">Autenticación biométrica</string>
+    <string name="biometric_subtitle">Confirma tu identidad para ingresar a Aura Beauty</string>
+    <string name="biometric_negative">Cancelar / Usar contraseña</string>
+    <string name="biometric_success">Identidad confirmada exitosamente</string>
+    <string name="biometric_error_not_available">El sensor biométrico no está disponible o no tiene huellas registradas</string>
+    <string name="biometric_failed">Huella no reconocida. Intenta de nuevo.</string>
+
+    <!-- Transversal: Navigation Labels -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_favorites">Favoritos</string>
+    <string name="nav_cart">Carrito</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="nav_panel">Panel</string>
+    <string name="nav_products">Productos</string>
+    <string name="nav_orders">Pedidos</string>
+    <string name="nav_users">Usuarios</string>
+    <string name="nav_payments">Pagos</string>
+    <string name="nav_more">Más</string>
+
+    <!-- Buyer Flow: Home & Catalog -->
+    <string name="buyer_greeting">Hola, Camila 💖</string>
+    <string name="buyer_subtitle">Qué bueno tenerte de vuelta</string>
+    <string name="search_hint_makeup">Buscar maquillaje…</string>
+    <string name="category_lips">👄 Labios</string>
+    <string name="category_eyes">👁️ Ojos</string>
+    <string name="category_skin">✨ Piel</string>
+    <string name="banner_headline">Belleza que resalta tu esencia 💖</string>
+    <string name="section_featured_products">Productos destacados</string>
+    <string name="btn_see_all">Ver todos &gt;</string>
+
+    <!-- Buyer Flow: Product Detail -->
+    <string name="reviews_sample">4.8 (120 reseñas)</string>
+    <string name="label_available_tones">Tonos disponibles</string>
+    <string name="stock_in_stock">En stock</string>
+    <string name="stock_more_than_ten">Más de 10 unidades</string>
+    <string name="btn_add_to_cart">Agregar al carrito</string>
+    <string name="msg_product_added_to_cart">¡Producto agregado al carrito!</string>
+
+    <!-- Buyer Flow: Cart -->
+    <string name="title_my_cart">Mi carrito</string>
+    <string name="label_subtotal">Subtotal</string>
+    <string name="label_shipping">Envío</string>
+    <string name="label_total">Total</string>
+    <string name="btn_proceed_to_checkout">Continuar al pago</string>
+    <string name="cart_empty_title">Tu carrito está vacío</string>
+    <string name="cart_empty_desc">Explora nuestro catálogo y descubre cosméticos diseñados para ti.</string>
+
+    <!-- Buyer Flow: Secure Payment -->
+    <string name="title_secure_payment">Pago seguro</string>
+    <string name="subtitle_secure_payment">Tus datos están protegidos (Cifrado TLS 1.3)</string>
+    <string name="label_shipping_address">Dirección de envío</string>
+    <string name="sample_address_title">Casa</string>
+    <string name="sample_address_detail">Cra. 15 # 93-21, Bogotá\nCamila Torres</string>
+    <string name="btn_edit">Editar</string>
+    <string name="label_payment_method">Método de pago</string>
+    <string name="sample_card_type">VISA</string>
+    <string name="sample_card_number">•••• 4242</string>
+    <string name="sample_card_expiry">Vence 05/27</string>
+    <string name="label_order_summary">Resumen del pedido</string>
+    <string name="btn_confirm_payment">Confirmar pago seguro</string>
+    <string name="msg_payment_success">¡Pago aprobado con éxito! Tu pedido ha sido generado.</string>
+
+    <!-- Buyer Flow: Order Tracking -->
+    <string name="title_order_tracking">Seguimiento del pedido</string>
+    <string name="order_step_confirmed">Pedido confirmado</string>
+    <string name="order_step_confirmed_date">12 abr. 2026 - 10:24 a. m.</string>
+    <string name="order_step_preparing">En preparación</string>
+    <string name="order_step_preparing_date">12 abr. 2026 - 3:15 p. m.</string>
+    <string name="order_step_on_way">En camino</string>
+    <string name="order_step_on_way_desc">Tu pedido va en ruta</string>
+    <string name="order_step_on_way_date">13 abr. 2026 - 9:40 a. m.</string>
+    <string name="order_step_delivered">Entregado</string>
+    <string name="order_tracking_banner_title">Tu pedido está en camino</string>
+    <string name="order_tracking_banner_desc">Llegará hoy antes de las 6:00 p. m.</string>
+    <string name="btn_order_view_detail">Ver detalle de compra</string>
+    <string name="legal_right_of_withdrawal">Derecho de retracto: conforme a la Ley 1480 de 2011, dispones de 5 días hábiles a partir de la entrega para solicitar la devolución o reembolso.</string>
+
+    <!-- Buyer Flow: Profile -->
+    <string name="title_profile">Mi Perfil</string>
+    <string name="profile_name_sample">Camila Torres</string>
+    <string name="profile_email_sample">camila.torres@email.com</string>
+    <string name="btn_retract_request">Solicitar derecho de retracto (Ley 1480)</string>
+    <string name="btn_logout">Cerrar sesión</string>
+
+    <!-- Seller Flow: Dashboard -->
+    <string name="seller_panel_title">Panel del vendedor</string>
+    <string name="seller_greeting">Hola, Laura</string>
+    <string name="seller_subtitle">¡Qué bueno verte de nuevo!</string>
+    <string name="kpi_today_sales">Ventas de hoy</string>
+    <string name="kpi_today_sales_value">$ 239.700</string>
+    <string name="kpi_orders_count">Pedidos</string>
+    <string name="kpi_orders_count_value">8</string>
+    <string name="kpi_low_stock">Stock bajo</string>
+    <string name="kpi_low_stock_value">3</string>
+    <string name="section_quick_actions">Acciones rápidas</string>
+    <string name="btn_quick_new_product">Nuevo producto</string>
+    <string name="btn_quick_view_orders">Ver pedidos</string>
+
+    <!-- Seller Flow: Products CRUD -->
+    <string name="seller_my_products_title">Mis productos</string>
+    <string name="tab_active">Activos</string>
+    <string name="tab_out_of_stock">Agotados</string>
+    <string name="tab_all">Todos</string>
+    <string name="label_product_name">Nombre del producto</string>
+    <string name="hint_product_name">Ej. Labial Velvet</string>
+    <string name="label_brand">Marca</string>
+    <string name="hint_brand">Selecciona una marca</string>
+    <string name="label_category">Categoría</string>
+    <string name="hint_category">Selecciona una categoría</string>
+    <string name="label_tone">Tono</string>
+    <string name="hint_tone">Ej. Rosa Nude</string>
+    <string name="label_price">Precio (COP)</string>
+    <string name="hint_price">$ 0</string>
+    <string name="label_stock">Stock disponible</string>
+    <string name="hint_stock">0</string>
+    <string name="btn_add_photo">Agregar foto</string>
+    <string name="btn_save_product">Guardar producto</string>
+    <string name="title_new_product">Nuevo producto</string>
+    <string name="title_edit_product">Editar producto</string>
+    <string name="btn_update_product">Actualizar producto</string>
+    <string name="btn_deactivate_product">Desactivar producto</string>
+    <string name="msg_product_saved">Producto registrado satisfactoriamente en el catálogo</string>
+    <string name="msg_product_updated">Producto actualizado con éxito</string>
+
+    <!-- Seller Flow: Orders Received -->
+    <string name="title_orders_received">Pedidos recibidos</string>
+    <string name="status_pending">Pendiente</string>
+    <string name="status_preparing">En preparación</string>
+    <string name="status_shipped">Enviado</string>
+    <string name="status_delivered">Entregado</string>
+    <string name="label_client">Cliente: </string>
+    <string name="label_products_count">%1$d productos</string>
+    <string name="btn_view_detail">Ver detalle</string>
+
+    <!-- Admin Flow: Dashboard -->
+    <string name="admin_panel_title">Panel de administración</string>
+    <string name="admin_greeting">Hola, Valentina 👑</string>
+    <string name="admin_subtitle">Aquí tienes un resumen general de la plataforma</string>
+    <string name="kpi_admin_users">Usuarios</string>
+    <string name="kpi_admin_users_value">1,284</string>
+    <string name="kpi_admin_users_growth">↑ 12%</string>
+    <string name="kpi_admin_products">Productos</string>
+    <string name="kpi_admin_products_value">356</string>
+    <string name="kpi_admin_products_growth">↑ 8%</string>
+    <string name="kpi_admin_sales">Ventas</string>
+    <string name="kpi_admin_sales_value">$ 12,450</string>
+    <string name="kpi_admin_sales_growth">↑ 24%</string>
+    <string name="kpi_admin_alerts">Alertas</string>
+    <string name="kpi_admin_alerts_value">7</string>
+    <string name="title_sales_chart">Ventas de los últimos 7 días</string>
+    <string name="filter_this_week">Esta semana ▼</string>
+    <string name="btn_admin_manage_users">Administrar usuarios</string>
+    <string name="btn_admin_manage_products">Administrar productos</string>
+    <string name="btn_admin_audit">Pagos y auditoría</string>
+    <string name="btn_admin_reports">Ver reportes</string>
+
+    <!-- Admin Flow: User Management -->
+    <string name="title_manage_users">Administrar usuarios</string>
+    <string name="subtitle_manage_users">Gestiona los usuarios de la plataforma</string>
+    <string name="search_hint_users">Buscar usuario…</string>
+    <string name="tab_all_users">Todos</string>
+    <string name="tab_buyers">Compradores</string>
+    <string name="tab_sellers">Vendedores</string>
+    <string name="status_active">Activo</string>
+    <string name="status_blocked">Bloqueado</string>
+    <string name="title_user_detail">Detalle del usuario</string>
+    <string name="label_account_status">Estado de cuenta</string>
+    <string name="btn_block_user">Bloquear usuario</string>
+    <string name="btn_unblock_user">Desbloquear usuario</string>
+    <string name="btn_save_changes">Guardar cambios</string>
+    <string name="msg_user_status_updated">Estado del usuario actualizado correctamente</string>
+
+    <!-- Admin Flow: Product Management & Audit -->
+    <string name="title_admin_manage_products">Administrar productos</string>
+    <string name="subtitle_admin_manage_products">Revisa y gestiona el catálogo de productos</string>
+    <string name="btn_review_product">Revisar producto →</string>
+    <string name="title_payments_audit">Pagos y auditoría</string>
+    <string name="subtitle_payments_audit">Consulta transacciones y actividad de la plataforma</string>
+    <string name="kpi_today_transactions">Transacciones de hoy</string>
+    <string name="kpi_today_transactions_value">42</string>
+    <string name="kpi_today_transactions_growth">↑ 18%</string>
+    <string name="kpi_active_gateway">Pasarela activa</string>
+    <string name="kpi_active_gateway_value">Stripe</string>
+    <string name="kpi_gateway_status">Operativa</string>
+    <string name="section_activity_log">Registro de actividad</string>
+    <string name="btn_view_logs">Ver registros</string>
+
+    <!-- Dialogs & General Actions -->
+    <string name="action_ok">Aceptar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_close">Cerrar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_back">Volver</string>
+    <string name="msg_field_required">Este campo es obligatorio</string>
+    <string name="msg_invalid_credentials">Credenciales incorrectas o rol no autorizado</string>
+    <string name="msg_feature_coming_soon">Módulo en sincronización con pasarela</string>
+</resources>

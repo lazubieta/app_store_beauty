@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark theme for Aura Beauty -->
+    <style name="Theme.AuraBeauty" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorSecondary">@color/secondary_mint</item>
+        <item name="android:statusBarColor">#1A1215</item>
+        <item name="android:windowBackground">#1F161A</item>
+        <item name="colorSurface">#2A1E24</item>
+    </style>
+
+    <style name="Theme.AuraBeauty.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

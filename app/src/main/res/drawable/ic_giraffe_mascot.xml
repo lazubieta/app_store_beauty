@@ -1,0 +1,82 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Aura Beauty Cute Giraffe Mascot -->
+    <!-- Head & Neck -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M60,18 C46,18 40,28 40,42 C40,56 46,64 50,72 L50,96 C50,102 70,102 70,96 L70,72 C74,64 80,56 80,42 C80,28 74,18 60,18 Z" />
+    <!-- Muzzle / Mouth area -->
+    <path
+        android:fillColor="#FFF9C4"
+        android:pathData="M48,46 C48,40 72,40 72,46 C72,56 48,56 48,46 Z" />
+    <!-- Cheeks (Blushing pink) -->
+    <path
+        android:fillColor="#F48FB1"
+        android:pathData="M44,48 A3,3 0 1,1 44,42 A3,3 0 1,1 44,48 Z" />
+    <path
+        android:fillColor="#F48FB1"
+        android:pathData="M76,48 A3,3 0 1,1 76,42 A3,3 0 1,1 76,48 Z" />
+    <!-- Giraffe Spots -->
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M48,26 A4,4 0 1,1 48,18 A4,4 0 1,1 48,26 Z" />
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M72,28 A4,4 0 1,1 72,20 A4,4 0 1,1 72,28 Z" />
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M56,76 A5,5 0 1,1 56,66 A5,5 0 1,1 56,76 Z" />
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M66,88 A4,4 0 1,1 66,80 A4,4 0 1,1 66,88 Z" />
+    <!-- Ears -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M38,32 C30,28 32,38 38,40 Z" />
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M82,32 C90,28 88,38 82,40 Z" />
+    <!-- Little Horns (Ossicones) -->
+    <path
+        android:strokeColor="#795548"
+        android:strokeWidth="3"
+        android:pathData="M52,20 L50,10" />
+    <path
+        android:fillColor="#795548"
+        android:pathData="M50,10 A3,3 0 1,1 50,4 A3,3 0 1,1 50,10 Z" />
+    <path
+        android:strokeColor="#795548"
+        android:strokeWidth="3"
+        android:pathData="M68,20 L70,10" />
+    <path
+        android:fillColor="#795548"
+        android:pathData="M70,10 A3,3 0 1,1 70,4 A3,3 0 1,1 70,10 Z" />
+    <!-- Eyes (Cute eyelashes) -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M52,36 A3,3 0 1,1 52,30 A3,3 0 1,1 52,36 Z" />
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M68,36 A3,3 0 1,1 68,30 A3,3 0 1,1 68,36 Z" />
+    <!-- Cute smile -->
+    <path
+        android:strokeColor="#5D4037"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M56,48 Q60,52 64,48" />
+    <!-- Makeup basket in hands -->
+    <path
+        android:fillColor="#F06292"
+        android:pathData="M42,94 C42,90 78,90 78,94 L74,110 C74,114 46,114 46,110 Z" />
+    <!-- Lipstick sticking out -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M54,88 L58,88 L58,94 L54,94 Z" />
+    <!-- Brush sticking out -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M64,86 L68,86 L67,94 L65,94 Z" />
+</vector>
