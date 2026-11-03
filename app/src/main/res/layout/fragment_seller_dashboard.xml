@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spacing_standard"
+        android:paddingEnd="@dimen/spacing_standard"
+        android:paddingBottom="@dimen/spacing_xxlarge">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="@string/seller_panel_title"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_display"
+            android:textStyle="bold" />
+
+        <!-- Saludo Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.AuraBeauty.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            app:cardCornerRadius="@dimen/corner_radius_card"
+            app:cardElevation="@dimen/elevation_low"
+            app:strokeColor="@color/surface_card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
+
+                <TextView
+                    android:id="@+id/tvSellerGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seller_greeting"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSellerSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxsmall"
+                    android:text="@string/seller_subtitle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- KPI Metrics Row (3 cards) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_standard"
+            android:orientation="horizontal">
+
+            <!-- KPI 1: Ventas de hoy -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.AuraBeauty.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_xsmall"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/corner_radius_card"
+                app:strokeColor="@color/surface_card_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="Ventas"
+                        android:src="@drawable/ic_payments"
+                        app:tint="@color/secondary_mint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xsmall"
+                        android:text="@string/kpi_today_sales"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_size_micro" />
+
+                    <TextView
+                        android:id="@+id/tvSellerKpiSales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxsmall"
+                        android:text="@string/kpi_today_sales_value"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_size_caption"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- KPI 2: Pedidos -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.AuraBeauty.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_xsmall"
+                android:layout_marginEnd="@dimen/spacing_xsmall"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/corner_radius_card"
+                app:strokeColor="@color/surface_card_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="Pedidos"
+                        android:src="@drawable/ic_truck"
+                        app:tint="@color/status_pending_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xsmall"
+                        android:text="@string/kpi_orders_count"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_size_micro" />
+
+                    <TextView
+                        android:id="@+id/tvSellerKpiOrders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxsmall"
+                        android:text="@string/kpi_orders_count_value"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_size_caption"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- KPI 3: Stock bajo -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.AuraBeauty.Card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_xsmall"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/corner_radius_card"
+                app:strokeColor="@color/surface_card_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:contentDescription="Alerta stock"
+                        android:src="@drawable/ic_favorites"
+                        app:tint="@color/status_blocked_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xsmall"
+                        android:text="@string/kpi_low_stock"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_size_micro" />
+
+                    <TextView
+                        android:id="@+id/tvSellerKpiStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xxsmall"
+                        android:text="@string/kpi_low_stock_value"
+                        android:textColor="@color/status_blocked_text"
+                        android:textSize="@dimen/text_size_caption"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Section: Acciones rápidas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:text="@string/section_quick_actions"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+
+        <!-- 2 Large Action Cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:orientation="horizontal">
+
+            <!-- Quick Action 1: Nuevo producto -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuickNewProduct"
+                style="@style/Widget.AuraBeauty.Card"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="@dimen/spacing_small"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/corner_radius_card"
+                app:strokeColor="#F8BBD0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFF0F5"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_timeline_dot_completed"
+                        android:backgroundTint="@color/primary"
+                        android:contentDescription="Nuevo producto"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/btn_quick_new_product"
+                        android:textColor="@color/primary_dark"
+                        android:textSize="@dimen/text_size_body"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Quick Action 2: Ver pedidos -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardQuickViewOrders"
+                style="@style/Widget.AuraBeauty.Card"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/corner_radius_card"
+                app:strokeColor="#B2DFDB">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E0F2F1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_medium">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_timeline_dot_completed"
+                        android:backgroundTint="@color/secondary_mint"
+                        android:contentDescription="Ver pedidos"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_truck"
+                        app:tint="@color/on_primary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/btn_quick_view_orders"
+                        android:textColor="@color/secondary_mint_dark"
+                        android:textSize="@dimen/text_size_body"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

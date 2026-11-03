@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.AuraBeauty.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_xsmall"
+    android:layout_marginBottom="@dimen/spacing_xsmall"
+    app:cardCornerRadius="@dimen/corner_radius_card"
+    app:cardElevation="@dimen/elevation_low"
+    app:strokeColor="@color/surface_card_stroke">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_medium">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/ivSellerProductThumb"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_dashed_photo_placeholder"
+            android:contentDescription="Producto"
+            android:padding="@dimen/spacing_xsmall"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_giraffe_mascot"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tvSellerProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Labial Velvet"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_subtitle"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnEditSellerProduct"
+            app:layout_constraintStart_toEndOf="@+id/ivSellerProductThumb"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Brand & Tone -->
+        <TextView
+            android:id="@+id/tvSellerProductTone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            android:text="Tono Rosa Nude"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toStartOf="@+id/btnEditSellerProduct"
+            app:layout_constraintStart_toEndOf="@+id/ivSellerProductThumb"
+            app:layout_constraintTop_toBottomOf="@+id/tvSellerProductName" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/tvSellerProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:text="$ 39.900"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivSellerProductThumb"
+            app:layout_constraintTop_toBottomOf="@+id/tvSellerProductTone" />
+
+        <!-- Stock Tag -->
+        <TextView
+            android:id="@+id/tvSellerProductStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            android:text="Stock: 24"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toEndOf="@+id/ivSellerProductThumb"
+            app:layout_constraintTop_toBottomOf="@+id/tvSellerProductPrice" />
+
+        <!-- Edit Icon Button -->
+        <ImageButton
+            android:id="@+id/btnEditSellerProduct"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Editar"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnOptionsSellerProduct"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- More Options Button -->
+        <ImageButton
+            android:id="@+id/btnOptionsSellerProduct"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Opciones"
+            android:src="@drawable/ic_more_vert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

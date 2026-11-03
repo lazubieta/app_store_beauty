@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerSellerProducts"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/spacing_standard"
+        android:paddingEnd="@dimen/spacing_standard"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/seller_my_products_title"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_headline"
+            android:textStyle="bold" />
+
+        <!-- Add Product Top Button -->
+        <ImageButton
+            android:id="@+id/btnSellerAddProductHeader"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_timeline_dot_completed"
+            android:backgroundTint="@color/primary"
+            android:contentDescription="@string/title_new_product"
+            android:padding="6dp"
+            android:src="@drawable/ic_add" />
+
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSearchSellerProducts"
+        style="@style/Widget.AuraBeauty.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_xsmall"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        app:cardCornerRadius="@dimen/corner_radius_pill"
+        app:layout_constraintTop_toBottomOf="@+id/headerSellerProducts"
+        app:strokeColor="@color/surface_card_stroke">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/spacing_standard"
+            android:paddingEnd="@dimen/spacing_standard">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Buscar"
+                android:src="@drawable/ic_search" />
+
+            <EditText
+                android:id="@+id/etSearchSellerProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:background="@null"
+                android:hint="Buscar producto…"
+                android:inputType="text"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/text_size_body" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Filter Chips Row (Activos / Agotados) -->
+    <LinearLayout
+        android:id="@+id/layoutSellerFilterChips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/cardSearchSellerProducts">
+
+        <TextView
+            android:id="@+id/chipSellerActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_active"
+            android:text="@string/tab_active"
+            android:textColor="@color/status_active_text"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chipSellerOutOfStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:background="@drawable/bg_chip_unselected"
+            android:text="@string/tab_out_of_stock"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_body" />
+
+    </LinearLayout>
+
+    <!-- Seller Products Recycler -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSellerProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:paddingStart="@dimen/spacing_standard"
+        android:paddingEnd="@dimen/spacing_standard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutSellerFilterChips" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
