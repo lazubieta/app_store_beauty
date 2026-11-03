@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.AuraBeauty.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_xsmall"
+    android:layout_marginBottom="@dimen/spacing_xsmall"
+    app:cardCornerRadius="@dimen/corner_radius_card"
+    app:cardElevation="@dimen/elevation_low"
+    app:strokeColor="@color/surface_card_stroke">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_medium">
+
+        <!-- User Avatar Circle -->
+        <ImageView
+            android:id="@+id/ivAdminUserAvatar"
+            android:layout_width="@dimen/avatar_size_medium"
+            android:layout_height="@dimen/avatar_size_medium"
+            android:background="@drawable/bg_dashed_photo_placeholder"
+            android:contentDescription="Avatar"
+            android:padding="8dp"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tvAdminUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Ana Torres"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvAdminUserStatusBadge"
+            app:layout_constraintStart_toEndOf="@+id/ivAdminUserAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Role -->
+        <TextView
+            android:id="@+id/tvAdminUserRole"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            android:text="Compradora"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toStartOf="@+id/tvAdminUserStatusBadge"
+            app:layout_constraintStart_toEndOf="@+id/ivAdminUserAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdminUserName" />
+
+        <!-- Status Chip Badge (Activo / Bloqueado) -->
+        <TextView
+            android:id="@+id/tvAdminUserStatusBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:background="@drawable/bg_badge_active"
+            android:text="Activo"
+            android:textColor="@color/status_active_text"
+            android:textSize="@dimen/text_size_caption"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnAdminEditUser"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Edit Pencil Icon -->
+        <ImageButton
+            android:id="@+id/btnAdminEditUser"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Editar usuario"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnAdminUserMore"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- More Options Button -->
+        <ImageButton
+            android:id="@+id/btnAdminUserMore"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Opciones"
+            android:src="@drawable/ic_more_vert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background">
+
+    <!-- Header Titles -->
+    <LinearLayout
+        android:id="@+id/headerAdminAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spacing_standard"
+        android:paddingTop="@dimen/spacing_small"
+        android:paddingEnd="@dimen/spacing_standard"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_payments_audit"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_headline"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            android:text="@string/subtitle_payments_audit"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_caption" />
+
+    </LinearLayout>
+
+    <!-- Top 2 KPI Cards (Transacciones & Pasarela activa) -->
+    <LinearLayout
+        android:id="@+id/layoutAdminAuditCards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/headerAdminAudit">
+
+        <!-- Card 1: Transacciones de hoy -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.AuraBeauty.Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_xsmall"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/corner_radius_card"
+            app:strokeColor="@color/surface_card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_medium">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Transacciones"
+                    android:src="@drawable/ic_payments"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xsmall"
+                    android:text="@string/kpi_today_transactions"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_micro" />
+
+                <TextView
+                    android:id="@+id/tvAuditKpiTransactions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxsmall"
+                    android:text="@string/kpi_today_transactions_value"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kpi_today_transactions_growth"
+                    android:textColor="@color/secondary_mint_dark"
+                    android:textSize="@dimen/text_size_micro"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card 2: Pasarela activa -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.AuraBeauty.Card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_xsmall"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/corner_radius_card"
+            app:strokeColor="@color/surface_card_stroke">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_medium">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Pasarela"
+                    android:src="@drawable/ic_shield_check"
+                    app:tint="@color/secondary_mint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xsmall"
+                    android:text="@string/kpi_active_gateway"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_micro" />
+
+                <TextView
+                    android:id="@+id/tvAuditKpiGateway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxsmall"
+                    android:text="@string/kpi_active_gateway_value"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kpi_gateway_status"
+                    android:textColor="@color/secondary_mint_dark"
+                    android:textSize="@dimen/text_size_micro"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!-- Section: Registro de actividad Header -->
+    <LinearLayout
+        android:id="@+id/layoutAuditLogSectionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAdminAuditCards">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/section_activity_log"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_size_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAuditViewAllLogs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver todos"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_caption"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Logs RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAdminAuditLogs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:paddingStart="@dimen/spacing_standard"
+        android:paddingEnd="@dimen/spacing_standard"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdminViewLogs"
+        app:layout_constraintTop_toBottomOf="@+id/layoutAuditLogSectionHeader" />
+
+    <!-- Bottom Button: Ver registros -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdminViewLogs"
+        style="@style/Widget.AuraBeauty.Button.Mint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_standard"
+        android:text="@string/btn_view_logs"
+        app:icon="@drawable/ic_orders"
+        app:iconGravity="textStart"
+        app:iconTint="@color/on_secondary"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

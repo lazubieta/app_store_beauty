@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.AuraBeauty.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_xxsmall"
+    android:layout_marginBottom="@dimen/spacing_xxsmall"
+    app:cardCornerRadius="@dimen/corner_radius_medium"
+    app:cardElevation="@dimen/elevation_none"
+    app:strokeColor="@color/surface_card_stroke">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium">
+
+        <!-- Action Icon -->
+        <ImageView
+            android:id="@+id/ivAuditActionIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_badge_pending"
+            android:contentDescription="Log"
+            android:padding="6dp"
+            android:src="@drawable/ic_profile" />
+
+        <!-- Log Details (Date & Action) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAuditTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 abr 2026 - 10:24"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_size_micro" />
+
+            <TextView
+                android:id="@+id/tvAuditActionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xxsmall"
+                android:text="Inicio de sesión"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_body"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- User / Actor and Role -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAuditActorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valentina"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_caption"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAuditActorRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Administrador"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_size_micro" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
