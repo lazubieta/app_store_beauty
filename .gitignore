@@ -24,3 +24,5 @@ output.json
 
 # OS generated files
 Thumbs.db
+
+*.zip
